@@ -69,6 +69,7 @@ const AppRoutes = () => {
         </ProtectedRoute>
       }>
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="customizable-dashboard" element={<CustomizableDashboardPage />} />
         <Route path="trend-scanner" element={<TrendScanner />} />
         <Route path="strategy-maker" element={<StrategyMaker />} />
         <Route path="cointracker" element={<Cointracker />} />
