@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { trackedCoins } from '../mockData';
+import { trackedCoins } from '../mockData/index';
 import { 
   ArrowUpIcon, 
   ArrowDownIcon, 
