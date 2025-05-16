@@ -58,6 +58,31 @@ const Sidebar = () => {
       icon: SparklesIcon,
       premium: true 
     },
+    {
+      name: 'Patterns',
+      path: '/patterns',
+      icon: ChartPieIcon
+    },
+    {
+      name: 'Trendlines',
+      path: '/trendlines',
+      icon: ArrowPathIcon
+    },
+    {
+      name: 'Divergences',
+      path: '/divergences',
+      icon: ArrowsRightLeftIcon
+    },
+    {
+      name: 'Key Levels',
+      path: '/key-levels',
+      icon: Square3Stack3DIcon
+    },
+    {
+      name: 'Volume Analysis',
+      path: '/volume',
+      icon: WrenchIcon
+    },
     { 
       name: t('myAccount'), 
       path: '/my-account', 
