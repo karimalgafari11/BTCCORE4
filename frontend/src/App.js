@@ -1,53 +1,81 @@
-import { useEffect } from "react";
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { AuthProvider } from "./contexts/AuthContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
+import { useAuth } from "./contexts/AuthContext";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Layouts
+import MainLayout from "./components/Layout/MainLayout";
+import AuthLayout from "./components/Auth/AuthLayout";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+// Pages
+import Dashboard from "./pages/Dashboard";
+import TrendScanner from "./pages/TrendScanner";
+import StrategyMaker from "./pages/StrategyMaker";
+import Cointracker from "./pages/Cointracker";
+import PriceActionScanner from "./pages/PriceActionScanner";
+import PumpingNow from "./pages/PumpingNow";
+import MyAccount from "./pages/MyAccount";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
+// Protected route component
+const ProtectedRoute = ({ children }) => {
+  const { currentUser, loading } = useAuth();
+  
+  if (loading) {
+    return <div className="flex items-center justify-center h-screen">Loading...</div>;
+  }
+  
+  if (!currentUser) {
+    return <Navigate to="/login" />;
+  }
+  
+  return children;
+};
 
+// App routes
+const AppRoutes = () => {
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
+    <Routes>
+      {/* Auth routes */}
+      <Route path="/" element={<AuthLayout />}>
+        <Route index element={<Navigate to="/login" />} />
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Signup />} />
+      </Route>
+      
+      {/* Protected routes */}
+      <Route path="/" element={
+        <ProtectedRoute>
+          <MainLayout />
+        </ProtectedRoute>
+      }>
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="trend-scanner" element={<TrendScanner />} />
+        <Route path="strategy-maker" element={<StrategyMaker />} />
+        <Route path="cointracker" element={<Cointracker />} />
+        <Route path="price-action-scanner" element={<PriceActionScanner />} />
+        <Route path="pumping-now" element={<PumpingNow />} />
+        <Route path="my-account" element={<MyAccount />} />
+      </Route>
+      
+      {/* Fallback */}
+      <Route path="*" element={<Navigate to="/dashboard" />} />
+    </Routes>
   );
 };
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <LanguageProvider>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </LanguageProvider>
+    </BrowserRouter>
   );
 }
 
