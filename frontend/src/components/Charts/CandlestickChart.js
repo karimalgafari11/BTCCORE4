@@ -90,7 +90,9 @@ const CandlestickChart = ({
       }
     },
     tooltip: {
-      theme: theme
+      theme: theme,
+      intersect: false,
+      shared: false
     }
   };
   
@@ -153,12 +155,8 @@ const CandlestickChart = ({
     },
     tooltip: {
       theme: theme,
-      shared: true,
-      custom: function({ seriesIndex, dataPointIndex, w }) {
-        return `<div class="apexcharts-tooltip-title" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;">
-                Volume: ${volume[dataPointIndex].y.toLocaleString()}
-                </div>`;
-      }
+      intersect: false,
+      shared: false
     },
     title: {
       text: 'Volume',
