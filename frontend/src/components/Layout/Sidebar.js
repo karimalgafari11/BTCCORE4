@@ -157,7 +157,7 @@ const Sidebar = () => {
           <li className={`mb-2 mt-4 text-xs ${theme === 'light' ? 'text-gray-600' : 'text-gray-500'} px-4 py-1 uppercase`}>
             Advanced Analysis
           </li>
-          {menuItems.slice(6, 12).map((item) => (
+          {menuItems.slice(7, 13).map((item) => (
             <li key={item.path} className="mb-1">
               <Link
                 to={item.path}
@@ -178,7 +178,7 @@ const Sidebar = () => {
           <li className={`mb-2 mt-4 text-xs ${theme === 'light' ? 'text-gray-600' : 'text-gray-500'} px-4 py-1 uppercase`}>
             User
           </li>
-          {menuItems.slice(12).map((item) => (
+          {menuItems.slice(13).map((item) => (
             <li key={item.path} className="mb-1">
               <Link
                 to={item.path}
