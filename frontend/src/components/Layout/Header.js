@@ -1,10 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import { useNavigate } from 'react-router-dom';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { BellIcon } from '@heroicons/react/24/outline';
 import { marketOverview } from '../../mockData';
+import ThemeToggle from '../UI/ThemeToggle';
 
 const Header = () => {
   const { t } = useTranslation();
