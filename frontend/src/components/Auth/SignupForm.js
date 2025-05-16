@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -113,9 +113,9 @@ const SignupForm = () => {
       
       <p className="mt-6 text-center text-sm">
         Already have an account?{' '}
-        <Link to="/login" className="text-primary-500 hover:underline">
+        <RouterLink to="/login" className="text-primary-500 hover:underline">
           {t('login')}
-        </Link>
+        </RouterLink>
       </p>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -82,9 +82,9 @@ const LoginForm = () => {
             </label>
           </div>
           
-          <Link to="/forgot-password" className="text-sm text-primary-500 hover:underline">
+          <RouterLink to="/forgot-password" className="text-sm text-primary-500 hover:underline">
             {t('forgotPassword')}
-          </Link>
+          </RouterLink>
         </div>
         
         <button
@@ -98,9 +98,9 @@ const LoginForm = () => {
       
       <p className="mt-6 text-center text-sm">
         {t('notRegistered')}{' '}
-        <Link to="/signup" className="text-primary-500 hover:underline">
+        <RouterLink to="/signup" className="text-primary-500 hover:underline">
           {t('goToRegistration')}
-        </Link>
+        </RouterLink>
       </p>
       
       {/* Demo credentials */}
