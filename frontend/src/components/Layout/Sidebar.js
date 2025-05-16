@@ -59,27 +59,27 @@ const Sidebar = () => {
       premium: true 
     },
     {
-      name: 'Patterns',
+      name: t('patterns'),
       path: '/patterns',
       icon: ChartPieIcon
     },
     {
-      name: 'Trendlines',
+      name: t('trendlines'),
       path: '/trendlines',
       icon: ArrowPathIcon
     },
     {
-      name: 'Divergences',
+      name: t('divergences'),
       path: '/divergences',
       icon: ArrowsRightLeftIcon
     },
     {
-      name: 'Key Levels',
+      name: t('keyLevels'),
       path: '/key-levels',
       icon: Square3Stack3DIcon
     },
     {
-      name: 'Volume Analysis',
+      name: t('volumeAnalysis'),
       path: '/volume',
       icon: WrenchIcon
     },
