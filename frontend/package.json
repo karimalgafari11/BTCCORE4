@@ -11,7 +11,7 @@
     "cra-template": "1.2.0",
     "framer-motion": "^10.16.4",
     "i18next": "^23.7.7",
-    "lightweight-charts": "^5.0.6",
+    "lightweight-charts": "^4.1.1",
     "react": "^18.2.0",
     "react-apexcharts": "^1.7.0",
     "react-dom": "^18.2.0",
