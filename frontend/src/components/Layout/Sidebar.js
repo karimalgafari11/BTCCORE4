@@ -190,6 +190,7 @@ const Sidebar = () => {
           >
             العربية
           </button>
+          <ThemeToggle />
         </div>
       </div>
     </div>
