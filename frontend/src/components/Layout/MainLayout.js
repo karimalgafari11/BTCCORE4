@@ -7,9 +7,10 @@ import Header from './Header';
 
 const MainLayout = () => {
   const { direction } = useLanguage();
+  const { theme } = useTheme();
   
   return (
-    <div className="flex min-h-screen bg-dark-800" dir={direction}>
+    <div className={`flex min-h-screen ${theme === 'light' ? 'bg-gray-50' : 'bg-dark-800'}`} dir={direction}>
       <Sidebar />
       <div className="flex-1 ml-64">
         <Header />
