@@ -6,7 +6,7 @@
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.0.18",
     "@tremor/react": "^3.18.7",
-    "apexcharts": "^4.7.0",
+    "apexcharts": "^3.45.0",
     "axios": "^1.8.4",
     "cra-template": "1.2.0",
     "framer-motion": "^12.12.1",
