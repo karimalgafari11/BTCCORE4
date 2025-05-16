@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useAuth } from '../../contexts/AuthContext';
@@ -111,9 +111,9 @@ const Sidebar = () => {
       theme === 'light' ? 'border-gray-200' : 'border-dark-600'
     } flex flex-col`}>
       <div className="p-4">
-        <Link to="/dashboard" className="flex items-center justify-center mb-8">
+        <RouterLink to="/dashboard" className="flex items-center justify-center mb-8">
           <span className="text-2xl font-bold bg-gradient bg-clip-text text-transparent">DYOR.net</span>
-        </Link>
+        </RouterLink>
         
         {currentUser && (
           <div className={`flex items-center p-3 mb-6 ${
@@ -133,7 +133,7 @@ const Sidebar = () => {
           <li className={`mb-2 text-xs ${theme === 'light' ? 'text-gray-600' : 'text-gray-500'} px-4 py-1 uppercase`}>Main</li>
           {menuItems.slice(0, 7).map((item) => (
             <li key={item.path} className="mb-1">
-              <Link
+              <RouterLink
                 to={item.path}
                 className={`flex items-center px-4 py-2 text-sm rounded-lg transition-colors ${
                   location.pathname === item.path 
@@ -150,7 +150,7 @@ const Sidebar = () => {
                     {t('premium')}
                   </span>
                 )}
-              </Link>
+              </RouterLink>
             </li>
           ))}
           
@@ -159,7 +159,7 @@ const Sidebar = () => {
           </li>
           {menuItems.slice(7, 13).map((item) => (
             <li key={item.path} className="mb-1">
-              <Link
+              <RouterLink
                 to={item.path}
                 className={`flex items-center px-4 py-2 text-sm rounded-lg transition-colors ${
                   location.pathname === item.path 
@@ -171,7 +171,7 @@ const Sidebar = () => {
               >
                 <item.icon className={`w-5 h-5 ${language === 'ar' ? 'ml-3' : 'mr-3'}`} />
                 <span>{item.name}</span>
-              </Link>
+              </RouterLink>
             </li>
           ))}
           
@@ -180,7 +180,7 @@ const Sidebar = () => {
           </li>
           {menuItems.slice(13).map((item) => (
             <li key={item.path} className="mb-1">
-              <Link
+              <RouterLink
                 to={item.path}
                 className={`flex items-center px-4 py-2 text-sm rounded-lg transition-colors ${
                   location.pathname === item.path 
@@ -192,7 +192,7 @@ const Sidebar = () => {
               >
                 <item.icon className={`w-5 h-5 ${language === 'ar' ? 'ml-3' : 'mr-3'}`} />
                 <span>{item.name}</span>
-              </Link>
+              </RouterLink>
             </li>
           ))}
         </ul>
