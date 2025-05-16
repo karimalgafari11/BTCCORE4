@@ -1,3 +1,268 @@
+// Mock crypto pairs
+export const cryptoPairs = [
+  { value: 'BTC/USDT', label: 'BTC/USDT' },
+  { value: 'ETH/USDT', label: 'ETH/USDT' },
+  { value: 'SOL/USDT', label: 'SOL/USDT' },
+  { value: 'BNB/USDT', label: 'BNB/USDT' },
+  { value: 'XRP/USDT', label: 'XRP/USDT' }
+];
+
+// Mock timeframes
+export const timeframes = [
+  { value: '1m', label: '1m' },
+  { value: '5m', label: '5m' },
+  { value: '15m', label: '15m' },
+  { value: '30m', label: '30m' },
+  { value: '1h', label: '1h' },
+  { value: '4h', label: '4h' },
+  { value: '1d', label: '1d' },
+  { value: '1w', label: '1w' },
+];
+
+// Mock market overview data
+export const marketOverview = {
+  status: 'bullish',
+  btcDominance: 47.8,
+  totalMarketCap: '$2.38T',
+  dailyVolume: '$126B',
+  fearGreedIndex: 72
+};
+
+// Mock trend scanner results
+export const trendScannerResults = [
+  {
+    id: 1,
+    pair: 'BTC/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    trend: 'bullish',
+    strength: 82,
+    signals: ['MA Cross', 'RSI Bullish']
+  },
+  {
+    id: 2,
+    pair: 'ETH/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    trend: 'bullish',
+    strength: 76,
+    signals: ['MACD Bullish', 'Volume Increase']
+  },
+  {
+    id: 3,
+    pair: 'SOL/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    trend: 'bullish',
+    strength: 85,
+    signals: ['MA Cross', 'RSI Bullish', 'Volume Increase']
+  },
+  {
+    id: 4,
+    pair: 'XRP/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    trend: 'neutral',
+    strength: 50,
+    signals: ['Range Bound']
+  },
+  {
+    id: 5,
+    pair: 'ADA/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    trend: 'bearish',
+    strength: 65,
+    signals: ['MA Cross Down', 'RSI Bearish']
+  },
+  {
+    id: 6,
+    pair: 'DOT/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    trend: 'bearish',
+    strength: 60,
+    signals: ['MACD Bearish', 'Lower Highs']
+  },
+  {
+    id: 7,
+    pair: 'AVAX/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    trend: 'bullish',
+    strength: 78,
+    signals: ['Breakout', 'Volume Spike']
+  }
+];
+
+// Mock price action scanner patterns
+export const priceActionPatterns = [
+  {
+    id: 1,
+    pair: 'BTC/USDT',
+    exchange: 'Binance',
+    timeframe: '1d',
+    pattern: 'Bullish Engulfing',
+    significance: 'Strong',
+    detectedAt: '2023-06-10T14:30:00Z'
+  },
+  {
+    id: 2,
+    pair: 'ETH/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    pattern: 'Double Bottom',
+    significance: 'Very Strong',
+    detectedAt: '2023-06-10T18:00:00Z'
+  },
+  {
+    id: 3,
+    pair: 'SOL/USDT',
+    exchange: 'Binance',
+    timeframe: '1d',
+    pattern: 'Bullish Flag',
+    significance: 'Strong',
+    detectedAt: '2023-06-09T00:00:00Z'
+  },
+  {
+    id: 4,
+    pair: 'BNB/USDT',
+    exchange: 'Binance',
+    timeframe: '4h',
+    pattern: 'Ascending Triangle',
+    significance: 'Moderate',
+    detectedAt: '2023-06-10T16:00:00Z'
+  },
+  {
+    id: 5,
+    pair: 'DOT/USDT',
+    exchange: 'Binance',
+    timeframe: '1d',
+    pattern: 'Bearish Harami',
+    significance: 'Moderate',
+    detectedAt: '2023-06-09T00:00:00Z'
+  }
+];
+
+// Mock tracked coins data
+export const trackedCoins = [
+  {
+    id: 'bitcoin',
+    name: 'Bitcoin',
+    symbol: 'BTC',
+    price: 65873.42,
+    change24h: 2.5,
+    marketCap: 1285790000000,
+    volume: 42789000000,
+    status: 'bullish',
+    alerts: [
+      {
+        id: 1,
+        type: 'price',
+        condition: 'above',
+        value: '$65,000',
+        triggered: true,
+        date: 'Today at 9:45 AM'
+      }
+    ]
+  },
+  {
+    id: 'ethereum',
+    name: 'Ethereum',
+    symbol: 'ETH',
+    price: 3521.78,
+    change24h: 3.2,
+    marketCap: 425360000000,
+    volume: 18547000000,
+    status: 'bullish',
+    alerts: [
+      {
+        id: 2,
+        type: 'price',
+        condition: 'above',
+        value: '$3,500',
+        triggered: true,
+        date: 'Today at 10:12 AM'
+      }
+    ]
+  },
+  {
+    id: 'solana',
+    name: 'Solana',
+    symbol: 'SOL',
+    price: 142.53,
+    change24h: 4.8,
+    marketCap: 67450000000,
+    volume: 5621000000,
+    status: 'bullish',
+    alerts: []
+  },
+  {
+    id: 'cardano',
+    name: 'Cardano',
+    symbol: 'ADA',
+    price: 0.52,
+    change24h: -1.2,
+    marketCap: 18740000000,
+    volume: 875000000,
+    status: 'bearish',
+    alerts: []
+  },
+  {
+    id: 'polkadot',
+    name: 'Polkadot',
+    symbol: 'DOT',
+    price: 6.73,
+    change24h: -0.5,
+    marketCap: 9250000000,
+    volume: 432000000,
+    status: 'neutral',
+    alerts: [
+      {
+        id: 3,
+        type: 'volume',
+        condition: 'above',
+        value: '$500M',
+        triggered: false
+      }
+    ]
+  }
+];
+
+// Mock pumping coins
+export const pumpingCoins = [
+  {
+    id: 'pump1',
+    coin: 'INJ',
+    name: 'Injective Protocol',
+    timeframe: '1h',
+    priceChange: 15.7,
+    volumeChange: 312.4,
+    currentPrice: 22.45,
+    exchange: 'Binance'
+  },
+  {
+    id: 'pump2',
+    coin: 'FET',
+    name: 'Fetch.ai',
+    timeframe: '1h',
+    priceChange: 12.3,
+    volumeChange: 245.8,
+    currentPrice: 1.78,
+    exchange: 'Binance'
+  },
+  {
+    id: 'pump3',
+    coin: 'RNDR',
+    name: 'Render Token',
+    timeframe: '1h',
+    priceChange: 8.9,
+    volumeChange: 178.3,
+    currentPrice: 4.32,
+    exchange: 'Binance'
+  }
+];
+
 // Mock volume analysis data
 export const volumeAnalysisData = {
   totalVolume: 126800000000, // $126.8B
