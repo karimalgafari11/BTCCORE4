@@ -22,6 +22,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
 // New Analysis Pages
+import CustomizableDashboardPage from "./pages/CustomizableDashboardPage";
 import ChartAnalysis from "./pages/ChartAnalysis";
 import PatternsAnalysis from "./pages/PatternsAnalysis";
 import TrendlinesAnalysis from "./pages/TrendlinesAnalysis";
