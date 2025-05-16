@@ -161,7 +161,14 @@ const resources = {
       // Subscriptions
       "subscriptions": "الاشتراكات",
       "freePlan": "الخطة المجانية",
-      "paidPlan": "الخطة المدفوعة"
+      "paidPlan": "الخطة المدفوعة",
+      
+      // New Analysis Pages
+      "patterns": "أنماط الرسم البياني",
+      "trendlines": "خطوط الاتجاه",
+      "divergences": "الانحرافات",
+      "keyLevels": "المستويات الرئيسية",
+      "volumeAnalysis": "تحليل الحجم"
     }
   }
 };
