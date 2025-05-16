@@ -13,6 +13,11 @@ import {
   ArrowTrendingUpIcon, 
   SparklesIcon,
   UserIcon,
+  ChartPieIcon,
+  WrenchIcon,
+  ArrowsRightLeftIcon,
+  ArrowPathIcon,
+  Square3Stack3DIcon,
 } from '@heroicons/react/24/outline';
 
 const Sidebar = () => {
