@@ -28,6 +28,7 @@ const Sidebar = () => {
   const location = useLocation();
   const { language, changeLanguage } = useLanguage();
   const { currentUser } = useAuth();
+  const { theme } = useTheme();
 
   const menuItems = [
     { 
