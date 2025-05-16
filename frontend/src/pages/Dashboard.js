@@ -10,7 +10,7 @@ import {
   ArrowTrendingUpIcon, 
   SparklesIcon,
 } from '@heroicons/react/24/outline';
-import { marketOverview } from '../mockData';
+import { marketOverview } from '../mockData/index';
 
 const Dashboard = () => {
   const { t } = useTranslation();
