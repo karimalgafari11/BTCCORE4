@@ -12,6 +12,11 @@ body {
   @apply bg-dark-800 text-white font-sans antialiased;
 }
 
+/* Light mode styles */
+.light body {
+  @apply bg-gray-50 text-gray-900;
+}
+
 /* RTL Support */
 [dir="rtl"] {
   text-align: right;
@@ -26,6 +31,10 @@ body {
   color-scheme: dark;
 }
 
+.light:root {
+  color-scheme: light;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -36,12 +45,24 @@ body {
   @apply bg-dark-700;
 }
 
+.light ::-webkit-scrollbar-track {
+  @apply bg-gray-200;
+}
+
 ::-webkit-scrollbar-thumb {
   @apply bg-dark-500 rounded-full;
 }
 
+.light ::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-dark-400;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
 }
 
 /* Card styling */
@@ -49,9 +70,17 @@ body {
   @apply bg-dark-700 rounded-card p-4 shadow-lg;
 }
 
+.light .card {
+  @apply bg-white rounded-card p-4 shadow-md;
+}
+
 /* Form elements */
 input, select, textarea {
   @apply bg-dark-600 border border-dark-500 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-primary-500;
+}
+
+.light input, .light select, .light textarea {
+  @apply bg-white border border-gray-300 focus:ring-primary-500;
 }
 
 button {
@@ -70,6 +99,10 @@ button.outline {
   @apply border border-dark-500 hover:bg-dark-600;
 }
 
+.light button.outline {
+  @apply border border-gray-300 hover:bg-gray-100 text-gray-800;
+}
+
 /* Tables */
 table {
   @apply w-full border-collapse;
@@ -79,8 +112,16 @@ th, td {
   @apply p-2 border-b border-dark-600;
 }
 
+.light th, .light td {
+  @apply border-gray-200;
+}
+
 th {
   @apply text-left font-semibold;
+}
+
+.light th {
+  @apply bg-gray-50;
 }
 
 [dir="rtl"] th {
