@@ -32,19 +32,34 @@ export const AuthProvider = ({ children }) => {
   // Simulate login
   const login = (email, password) => {
     return new Promise((resolve, reject) => {
-      // Skipping auth check for development purposes - always grant access
-      const user = {
-        id: 1,
-        email: 'demo@dyor.net',
-        name: 'Demo User',
-        isSubscribed: true,
-        telegramConnected: false,
-        notifications: true
-      };
+      console.log(`Attempting login with email: ${email}`);
       
-      setCurrentUser(user);
-      localStorage.setItem('dyor_user', JSON.stringify(user));
-      resolve(user);
+      setLoading(true);
+      
+      // Add a small delay to simulate network request
+      setTimeout(() => {
+        try {
+          // For demo purposes, accept both any credentials (for dev) and also the specific demo credentials
+          const user = {
+            id: 1,
+            email: email || 'demo@dyor.net',
+            name: 'Demo User',
+            isSubscribed: true,
+            telegramConnected: false,
+            notifications: true
+          };
+          
+          setCurrentUser(user);
+          localStorage.setItem('dyor_user', JSON.stringify(user));
+          console.log('Login successful');
+          setLoading(false);
+          resolve(user);
+        } catch (error) {
+          console.error('Login error:', error);
+          setLoading(false);
+          reject(new Error('Authentication failed. Please try again.'));
+        }
+      }, 500);
     });
   };
 
