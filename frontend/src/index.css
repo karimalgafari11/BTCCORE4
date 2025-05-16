@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-  @apply bg-dark-800 text-white font-sans antialiased dark;
+  @apply bg-dark-800 text-white font-sans antialiased;
 }
 
 /* RTL Support */
