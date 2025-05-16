@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { pumpingCoins } from '../mockData';
+import { pumpingCoins } from '../mockData/index';
 import { FireIcon, ArrowTrendingUpIcon, ChartBarIcon } from '@heroicons/react/24/solid';
 
 const PumpingNow = () => {
