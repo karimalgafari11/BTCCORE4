@@ -124,8 +124,12 @@ const resources = {
 
       // Dashboard
       "dashboard": "لوحة التحكم",
+      "customizableDashboard": "لوحة التحكم القابلة للتخصيص",
       "createStrategy": "إنشاء استراتيجية",
       "addCoin": "إضافة عملة",
+      "customizeDashboard": "تخصيص لوحة التحكم",
+      "resetDashboard": "إعادة ضبط لوحة التحكم",
+      "availableWidgets": "الأدوات المتاحة",
 
       // TrendScanner
       "trendScanner": "ماسح الاتجاهات",
