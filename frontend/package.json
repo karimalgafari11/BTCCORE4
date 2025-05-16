@@ -7,7 +7,7 @@
     "@heroicons/react": "^2.0.18",
     "@tremor/react": "^3.18.7",
     "apexcharts": "^3.45.0",
-    "axios": "^1.8.4",
+    "axios": "^1.6.2",
     "cra-template": "1.2.0",
     "framer-motion": "^12.12.1",
     "i18next": "^25.1.3",
