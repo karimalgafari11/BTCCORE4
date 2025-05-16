@@ -31,8 +31,12 @@ import VolumeAnalysis from "./pages/VolumeAnalysis";
 const useRequireAuth = () => {
   const { currentUser, loading } = useAuth();
 
-  // For demo purposes, bypass authentication check
-  return { isAuthenticated: true, loading: false, user: { name: "Demo User", isSubscribed: true } };
+  // For demo purposes, we'll consider the user authenticated if currentUser exists
+  return { 
+    isAuthenticated: !!currentUser, 
+    loading, 
+    user: currentUser 
+  };
 };
 
 // Protected Route component
