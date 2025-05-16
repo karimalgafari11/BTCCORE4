@@ -21,10 +21,10 @@ const LoginForm = () => {
       setError('');
       setLoading(true);
       await login(email, password);
-      // Force redirect after login
-      window.location.href = '/dashboard';
+      // Change from window.location.href to navigate
+      navigate('/dashboard');
     } catch (err) {
-      setError('Failed to sign in: ' + err.message);
+      setError('Failed to sign in: ' + (err.message || 'Unknown error'));
     } finally {
       setLoading(false);
     }
