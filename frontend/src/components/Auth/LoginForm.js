@@ -17,15 +17,12 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (!email || !password) {
-      return setError('Please fill in all fields');
-    }
-    
     try {
       setError('');
       setLoading(true);
       await login(email, password);
-      navigate('/dashboard');
+      // Force redirect after login
+      window.location.href = '/dashboard';
     } catch (err) {
       setError('Failed to sign in: ' + err.message);
     } finally {
