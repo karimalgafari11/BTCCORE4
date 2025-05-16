@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { cryptoPairs, timeframes } from '../mockData';
 import { mockChartData } from '../mockData/chartData';
-import InteractiveChart from '../components/Charts/InteractiveChart';
+import CandlestickChart from '../components/Charts/CandlestickChart';
 
 const ChartAnalysis = () => {
   const { t } = useTranslation();
@@ -44,7 +44,7 @@ const ChartAnalysis = () => {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Interactive Chart</h1>
+      <h1 className="text-2xl font-bold">{t('chart')}</h1>
       
       {/* Chart Controls */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -115,7 +115,7 @@ const ChartAnalysis = () => {
       
       {/* Chart Container */}
       <div className="card p-4">
-        <InteractiveChart 
+        <CandlestickChart 
           data={chartData} 
           pair={selectedPair} 
           timeframe={selectedTimeframe} 
