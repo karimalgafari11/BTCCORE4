@@ -66,6 +66,13 @@ const AppRoutes = () => {
         <Route path="price-action-scanner" element={<PriceActionScanner />} />
         <Route path="pumping-now" element={<PumpingNow />} />
         <Route path="my-account" element={<MyAccount />} />
+        
+        {/* New analysis routes */}
+        <Route path="patterns" element={<PatternsAnalysis />} />
+        <Route path="trendlines" element={<TrendlinesAnalysis />} />
+        <Route path="divergences" element={<DivergencesAnalysis />} />
+        <Route path="key-levels" element={<KeyLevels />} />
+        <Route path="volume" element={<VolumeAnalysis />} />
       </Route>
       
       {/* Fallback */}
