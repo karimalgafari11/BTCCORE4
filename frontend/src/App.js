@@ -29,7 +29,7 @@ import VolumeAnalysis from "./pages/VolumeAnalysis";
 
 // Custom hook to check if user is authenticated
 const useRequireAuth = () => {
-  const { currentUser, loading } = React.useContext(AuthProvider);
+  const { currentUser, loading } = useAuth();
 
   // For demo purposes, bypass authentication check
   return { isAuthenticated: true, loading: false, user: { name: "Demo User", isSubscribed: true } };
