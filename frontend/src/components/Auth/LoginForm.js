@@ -20,10 +20,12 @@ const LoginForm = () => {
     try {
       setError('');
       setLoading(true);
+      console.log('Submitting login form with:', email, password);
       await login(email, password);
-      // Change from window.location.href to navigate
+      console.log('Login successful, navigating to dashboard');
       navigate('/dashboard');
     } catch (err) {
+      console.error('Login error in form:', err);
       setError('Failed to sign in: ' + (err.message || 'Unknown error'));
     } finally {
       setLoading(false);
