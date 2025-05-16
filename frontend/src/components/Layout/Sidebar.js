@@ -131,7 +131,7 @@ const Sidebar = () => {
       <nav className="flex-1 overflow-y-auto">
         <ul className="px-2">
           <li className={`mb-2 text-xs ${theme === 'light' ? 'text-gray-600' : 'text-gray-500'} px-4 py-1 uppercase`}>Main</li>
-          {menuItems.slice(0, 6).map((item) => (
+          {menuItems.slice(0, 7).map((item) => (
             <li key={item.path} className="mb-1">
               <Link
                 to={item.path}
