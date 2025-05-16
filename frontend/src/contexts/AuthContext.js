@@ -10,7 +10,7 @@ const mockUsers = [
     email: 'demo@dyor.net',
     password: 'password123',
     name: 'Demo User',
-    isSubscribed: false,
+    isSubscribed: true, // Changed to true to showcase premium features
     telegramConnected: false,
     notifications: true
   }
