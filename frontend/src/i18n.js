@@ -77,7 +77,14 @@ const resources = {
       // Subscriptions
       "subscriptions": "Subscriptions",
       "freePlan": "Free Plan",
-      "paidPlan": "Paid Plan"
+      "paidPlan": "Paid Plan",
+      
+      // New Analysis Pages
+      "patterns": "Chart Patterns",
+      "trendlines": "Trendlines",
+      "divergences": "Divergences",
+      "keyLevels": "Key Levels",
+      "volumeAnalysis": "Volume Analysis"
     }
   },
   ar: {
