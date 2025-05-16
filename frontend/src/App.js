@@ -27,8 +27,13 @@ import DivergencesAnalysis from "./pages/DivergencesAnalysis";
 import KeyLevels from "./pages/KeyLevels";
 import VolumeAnalysis from "./pages/VolumeAnalysis";
 
-// Protected route component
+// Protected route component - For development, we're temporarily disabling auth checks
 const ProtectedRoute = ({ children }) => {
+  // Always render children without auth check for development
+  return children;
+  
+  /* 
+  // Uncomment this code to enable authentication
   const { currentUser, loading } = useAuth();
   
   if (loading) {
@@ -40,6 +45,7 @@ const ProtectedRoute = ({ children }) => {
   }
   
   return children;
+  */
 };
 
 // App routes
