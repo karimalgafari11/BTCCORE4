@@ -12,12 +12,14 @@ export const ThemeProvider = ({ children }) => {
     changeTheme(storedTheme);
   }, []);
 
-  // Change theme function
+  // Apply theme to document
   const changeTheme = (newTheme) => {
     setTheme(newTheme);
     localStorage.setItem('dyor_theme', newTheme);
     
     // Apply theme to document
+    document.documentElement.dataset.theme = newTheme;
+    
     if (newTheme === 'dark') {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
