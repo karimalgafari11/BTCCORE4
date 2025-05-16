@@ -80,6 +80,7 @@ const AppRoutes = () => {
         <Route path="divergences" element={<DivergencesAnalysis />} />
         <Route path="key-levels" element={<KeyLevels />} />
         <Route path="volume" element={<VolumeAnalysis />} />
+        <Route path="chart" element={<ChartAnalysis />} />
       </Route>
       
       {/* Fallback */}
