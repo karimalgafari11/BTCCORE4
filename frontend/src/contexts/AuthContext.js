@@ -51,29 +51,19 @@ export const AuthProvider = ({ children }) => {
   // Simulate signup
   const signup = (email, password, name) => {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const existingUser = mockUsers.find(u => u.email === email);
-        if (existingUser) {
-          reject(new Error('Email already in use'));
-        } else {
-          const newUser = {
-            id: mockUsers.length + 1,
-            email,
-            password,
-            name,
-            isSubscribed: false,
-            telegramConnected: false,
-            notifications: true
-          };
-          mockUsers.push(newUser);
-          
-          const userWithoutPassword = { ...newUser };
-          delete userWithoutPassword.password;
-          setCurrentUser(userWithoutPassword);
-          localStorage.setItem('dyor_user', JSON.stringify(userWithoutPassword));
-          resolve(userWithoutPassword);
-        }
-      }, 500);
+      // Skipping auth check for development purposes - always create account
+      const user = {
+        id: 1,
+        email: email,
+        name: name,
+        isSubscribed: true,
+        telegramConnected: false,
+        notifications: true
+      };
+      
+      setCurrentUser(user);
+      localStorage.setItem('dyor_user', JSON.stringify(user));
+      resolve(user);
     });
   };
 
