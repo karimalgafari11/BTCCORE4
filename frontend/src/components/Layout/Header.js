@@ -11,6 +11,7 @@ import ThemeToggle from '../UI/ThemeToggle';
 const Header = () => {
   const { t } = useTranslation();
   const { currentUser, logout } = useAuth();
+  const { theme } = useTheme();
   const navigate = useNavigate();
 
   const handleLogout = () => {
