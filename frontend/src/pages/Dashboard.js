@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { 
   ChartBarIcon, 
@@ -67,24 +67,24 @@ const Dashboard = () => {
         <h1 className="text-2xl font-bold">{t('dashboard')}</h1>
         
         <div className="flex space-x-3">
-          <Link
+          <RouterLink
             to="/strategy-maker"
             className="flex items-center px-4 py-2 bg-secondary-500 hover:bg-secondary-600 text-white rounded-lg text-sm transition-colors"
           >
             {t('createStrategy')}
-          </Link>
-          <Link
+          </RouterLink>
+          <RouterLink
             to="/cointracker"
             className="flex items-center px-4 py-2 bg-dark-700 hover:bg-dark-600 text-white rounded-lg text-sm transition-colors"
           >
             {t('addCoin')}
-          </Link>
+          </RouterLink>
         </div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {dashboardCards.map((card) => (
-          <Link
+          <RouterLink
             key={card.id}
             to={card.path}
             className={`card p-5 flex flex-col hover:bg-dark-600 transition-colors ${
@@ -105,7 +105,7 @@ const Dashboard = () => {
             
             <h3 className="text-lg font-semibold mt-4">{card.title}</h3>
             <p className="text-sm text-gray-400 mt-2">{card.description}</p>
-          </Link>
+          </RouterLink>
         ))}
         
         {/* Market Status Card */}
