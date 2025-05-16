@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { trendScannerResults } from '../mockData';
+import { trendScannerResults } from '../mockData/index';
 import { ArrowUpIcon, ArrowDownIcon, MinusIcon } from '@heroicons/react/24/solid';
 
 const TrendScanner = () => {
