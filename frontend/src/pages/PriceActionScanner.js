@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { priceActionPatterns } from '../mockData';
+import { priceActionPatterns } from '../mockData/index';
 import { ClockIcon, ArrowTrendingUpIcon, FireIcon } from '@heroicons/react/24/outline';
 
 const PriceActionScanner = () => {
