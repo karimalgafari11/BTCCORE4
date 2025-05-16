@@ -60,6 +60,11 @@ const Sidebar = () => {
       premium: true 
     },
     {
+      name: t('chart'),
+      path: '/chart',
+      icon: ChartBarSquareIcon
+    },
+    {
       name: t('patterns'),
       path: '/patterns',
       icon: ChartPieIcon
