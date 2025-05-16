@@ -35,8 +35,12 @@ const resources = {
 
       // Dashboard
       "dashboard": "Dashboard",
+      "customizableDashboard": "Customizable Dashboard",
       "createStrategy": "Create Strategy",
       "addCoin": "Add Coin",
+      "customizeDashboard": "Customize Dashboard",
+      "resetDashboard": "Reset Dashboard",
+      "availableWidgets": "Available Widgets",
 
       // TrendScanner
       "trendScanner": "TrendScanner",
