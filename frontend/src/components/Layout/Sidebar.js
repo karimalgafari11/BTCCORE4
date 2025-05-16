@@ -100,14 +100,20 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="h-screen fixed w-64 bg-dark-800 border-r border-dark-600 flex flex-col">
+    <div className={`h-screen fixed w-64 ${
+      theme === 'light' ? 'bg-white' : 'bg-dark-800'
+    } border-r ${
+      theme === 'light' ? 'border-gray-200' : 'border-dark-600'
+    } flex flex-col`}>
       <div className="p-4">
         <Link to="/dashboard" className="flex items-center justify-center mb-8">
           <span className="text-2xl font-bold bg-gradient bg-clip-text text-transparent">DYOR.net</span>
         </Link>
         
         {currentUser && (
-          <div className="flex items-center p-3 mb-6 bg-dark-700 rounded-card">
+          <div className={`flex items-center p-3 mb-6 ${
+            theme === 'light' ? 'bg-gray-100' : 'bg-dark-700'
+          } rounded-card`}>
             <div className="w-10 h-10 rounded-full bg-gray-700 mr-3"></div>
             <div>
               <div className="text-sm font-medium">{currentUser.name}</div>
