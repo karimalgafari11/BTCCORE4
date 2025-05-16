@@ -32,18 +32,19 @@ export const AuthProvider = ({ children }) => {
   // Simulate login
   const login = (email, password) => {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const user = mockUsers.find(u => u.email === email && u.password === password);
-        if (user) {
-          const userWithoutPassword = { ...user };
-          delete userWithoutPassword.password;
-          setCurrentUser(userWithoutPassword);
-          localStorage.setItem('dyor_user', JSON.stringify(userWithoutPassword));
-          resolve(userWithoutPassword);
-        } else {
-          reject(new Error('Invalid email or password'));
-        }
-      }, 500);
+      // Skipping auth check for development purposes - always grant access
+      const user = {
+        id: 1,
+        email: 'demo@dyor.net',
+        name: 'Demo User',
+        isSubscribed: true,
+        telegramConnected: false,
+        notifications: true
+      };
+      
+      setCurrentUser(user);
+      localStorage.setItem('dyor_user', JSON.stringify(user));
+      resolve(user);
     });
   };
 
