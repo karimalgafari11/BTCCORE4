@@ -169,7 +169,8 @@ const resources = {
       "trendlines": "خطوط الاتجاه",
       "divergences": "الانحرافات",
       "keyLevels": "المستويات الرئيسية",
-      "volumeAnalysis": "تحليل الحجم"
+      "volumeAnalysis": "تحليل الحجم",
+      "chart": "الرسم البياني التفاعلي"
     }
   }
 };
