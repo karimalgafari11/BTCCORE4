@@ -95,7 +95,7 @@ const AppRoutes = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <LanguageProvider>
         <ThemeProvider>
           <AuthProvider>
@@ -103,7 +103,7 @@ function App() {
           </AuthProvider>
         </ThemeProvider>
       </LanguageProvider>
-    </BrowserRouter>
+    </Router>
   );
 }
 
