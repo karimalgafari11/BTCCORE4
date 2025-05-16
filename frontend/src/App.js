@@ -9,6 +9,17 @@ import { useAuth } from "./contexts/AuthContext";
 import MainLayout from "./components/Layout/MainLayout";
 import AuthLayout from "./components/Auth/AuthLayout";
 
+// Pages
+import Dashboard from "./pages/Dashboard";
+import TrendScanner from "./pages/TrendScanner";
+import StrategyMaker from "./pages/StrategyMaker";
+import Cointracker from "./pages/Cointracker";
+import PriceActionScanner from "./pages/PriceActionScanner";
+import PumpingNow from "./pages/PumpingNow";
+import MyAccount from "./pages/MyAccount";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 // New Analysis Pages
 import PatternsAnalysis from "./pages/PatternsAnalysis";
 import TrendlinesAnalysis from "./pages/TrendlinesAnalysis";
