@@ -84,7 +84,8 @@ const resources = {
       "trendlines": "Trendlines",
       "divergences": "Divergences",
       "keyLevels": "Key Levels",
-      "volumeAnalysis": "Volume Analysis"
+      "volumeAnalysis": "Volume Analysis",
+      "chart": "Interactive Chart"
     }
   },
   ar: {
