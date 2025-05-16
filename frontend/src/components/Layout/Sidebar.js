@@ -37,6 +37,11 @@ const Sidebar = () => {
       icon: ChartBarIcon 
     },
     { 
+      name: t('customizableDashboard'), 
+      path: '/customizable-dashboard', 
+      icon: ViewColumnsIcon 
+    },
+    { 
       name: t('trendScanner'), 
       path: '/trend-scanner', 
       icon: ArrowTrendingUpIcon 
