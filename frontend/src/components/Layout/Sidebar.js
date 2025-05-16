@@ -18,6 +18,7 @@ import {
   ArrowsRightLeftIcon,
   ArrowPathIcon,
   Square3Stack3DIcon,
+  ChartBarSquareIcon,
 } from '@heroicons/react/24/outline';
 
 const Sidebar = () => {
