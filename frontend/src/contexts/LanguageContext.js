@@ -12,9 +12,6 @@ export const LanguageProvider = ({ children }) => {
     // Check for stored language preference
     const storedLanguage = localStorage.getItem('dyor_language') || 'en';
     changeLanguage(storedLanguage);
-    
-    // Add dark class to html element
-    document.documentElement.classList.add('dark');
   }, []);
 
   // Change language function
